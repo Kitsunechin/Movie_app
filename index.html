@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>booking a movie</title>
+  <link rel="stylesheet" href="style/main.css">
+  
+</head>
+<body>
+<div class="tab">
+    <img id="logo" src="star.jpg" alt="Avatar" class="avatar"><br><br><hr>
+    <div id="links">
+    <button class="tablinks" onclick="openTab(event, 'Login')">Login</button>
+    <button class="tablinks" onclick="openTab(event, 'Movies')">Movies</button>
+    <button class="tablinks" onclick="openTab(event, 'Booking')">Your Booking</button>
+  </div>
+  </div>
+
+  <!-- Login -->
+  <div id="Login" class="tabcontent">
+    <div class="container">
+        <p id="demo"></p>
+        <form id="form">
+          <br><br>
+          <label class="log_fill" for="uname"><b>Username</b></label>
+          <input id="input_name"  type="text" placeholder="Enter Username" name="uname" required>
+    
+          <label class="log_fill" for="psw"><b>Password</b></label>
+          <input id="input_password"  type="password" placeholder="Enter Password" name="psw" required>
+          
+          <label class="log_fill" for="uname"><b>E-mail</b></label>
+          <input id="input_mail"  type="email" placeholder="Enter email" name="email" required>
+    
+          <label class="log_fill check_fill"><input type="checkbox" checked="checked" name="remember"> Remember Me </label>
+          <button id="btn_log" >Login</button>
+          </form>
+      </div>
+  </div>
+
+<!-- Movie Tab-->
+<div id="Movies" class="tabcontent">  
+<div class= "container"><br>
+    
+        <h1>Choose a Movie</h1>
+         <div class= flexbox id=flex>
+          <div class="grid" id="movies">
+            <div class="cell"><img onclick="openTab(event, 'Booking')"src="https://d9nvuahg4xykp.cloudfront.net/7884877541569456154/-8317778251120885430.jpg" class="responsive-image">
+            <div id= "overlay" class="overlay"><div  class="text">Capitan America</div></div></div>
+            <div class="cell"><img onclick="openTab(event, 'Booking')"src="https://netny.tv/wp-content/uploads/2015/06/212061.jpg" class="responsive-image">
+            <div id= "overlay" class="overlay"><div  class="text">Mad Max</div></div></div>
+            <div class="cell"><img onclick="openTab(event, 'Booking')"src="https://exclaim.ca//images/starwars8.jpg" class="responsive-image">
+            <div id= "overlay" class="overlay"><div  class="text">Star Wars</div></div></div>
+            <div class="cell"><img onclick="openTab(event, 'Booking')"src="https://m.media-amazon.com/images/M/MV5BYjcyYTk0N2YtMzc4ZC00Y2E0LWFkNDgtNjE1MzZmMGE1YjY1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SY1000_CR0,0,675,1000_AL_.jpg" class="responsive-image">
+            <div id= "overlay" class="overlay"><div  class="text">Ant Man and Wasp</div></div></div>
+            <div class="cell"><img onclick="openTab(event, 'Booking')"src="https://m.media-amazon.com/images/M/MV5BYTE0Yjc1NzUtMjFjMC00Y2I3LTg3NGYtNGRlMGJhYThjMTJmXkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_SY1000_CR0,0,674,1000_AL_.jpg" class="responsive-image">
+            <div id= "overlay" class="overlay"><div class="text">Shazam</div></div></div>
+            <div class="cell"><img onclick="openTab(event, 'Booking')"src="http://t1.gstatic.com/images?q=tbn:ANd9GcRFQot9OQioUnQutNoXNMMHVjzPImJEyUZ-0BBPjlqkuVKkxS31" class="responsive-image">
+            <div id= "overlay" class="overlay"><div class="text">Us</div></div></div>
+            </div>
+            <br><br>
+          </div></div></div>
+
+<!-- Booking Tab -->
+ <div id="Booking" class="tabcontent">     
+ <div class="container"><br><br><br><br>
+
+          <p id="label">Choose Your Movie Theater</p>
+          <div class="dropdown">
+          <select name="" id="theaters" required>
+            <option value="" selected disabled hidden></option>
+            <option value="poznan">Poznań</option>
+            <option value="warszawa">Warszawa</option>
+            <option value="wroclaw">Wrocław</option>
+            <option value="krakow">Kraków</option>
+          </select></div>
+          
+          <div id="kino_poznan" class="hide"><button class="bt_city" value="12:30">12:30</button><button class="bt_city" value="14:20">14:20</button><button class="bt_city" value="16:00">16:00</button><button class="bt_city" value="18:30">18:30</button></div>
+          <div id="kino_warszawa" class="hide"><button class="bt_city" value="10:00">10:00</button><button class="bt_city" value="11:30">11:30</button><button class="bt_city" value="15:00">15:00</button><button class="bt_city" value="19:30">19:30</button><button class="bt_city" value="22:30">22:30</button></div>
+          <div id="kino_wroclaw" class="hide"><button class="bt_city" value="12:00">12:00</button><button class="bt_city" value="13:30">13:30</button><button class="bt_city" value="16:30">16:30</button><button class="bt_city" value="20:00">20:00</button></div>
+          <div id="kino_krakow" class="hide"><button class="bt_city" value="09:30">09:30</button><button class="bt_city" value="10:30">10:30</button><button class="bt_city" value="15:20">15:20</button><button class="bt_city" value="17:15">17:15</button><button class="bt_city" value="20:30">20:30</button></div>
+          <br>
+       
+           <div id="seats_row">
+            <button id="seats" onclick="seatFunction()">Choose Seats</button><br><br>
+            <div id="choose_seats">
+            <div id="div1"></div>
+            <p>Total Price:</p> <div id="price"><em id="emphasis">First choose your seats!</em></div>
+            <p id="wypisanie"></p>
+          </div></div>
+      <button id="submit">Book Tickets</button>
+      <br>
+  </div>		    	
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <div class="modal-content">
+    <div class="close">&times;</div>
+    <h2 id="order"></h2>
+  </div>
+</div>
+           
+</body>
+<script src="data.js"></script>
+<script src="main.js"></script>
+</html>
